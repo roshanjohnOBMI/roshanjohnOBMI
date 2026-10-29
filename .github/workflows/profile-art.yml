@@ -42,7 +42,8 @@ jobs:
 
       - name: Publish snake to output branch
         run: |
-          cd dist
+          mkdir -p "$RUNNER_TEMP/snake" && cp dist/*.svg "$RUNNER_TEMP/snake/"
+          cd "$RUNNER_TEMP/snake"
           git init -q -b output
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
