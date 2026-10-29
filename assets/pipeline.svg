@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-label="How the tools connect: Revit and Navisworks models feed C# and pyRevit add-ins, which push data through Autodesk Platform Services and ACC into the Power Platform and out to dashboards. OBMI Meridian feeds usage and model health back.">
+<style>
+  .wire{fill:none;stroke:#5ec8ff;stroke-width:2;stroke-dasharray:6 6;animation:flow 1s linear infinite}
+  .back{stroke:#ff8a1f;opacity:.8;animation-duration:1.4s;animation-direction:reverse}
+  @keyframes flow{to{stroke-dashoffset:-12}}
+  .node{animation:lift 5s ease-in-out infinite}
+  @keyframes lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><pattern id="g2" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#1d2731"/></pattern></defs>
+<rect width="1200" height="330" rx="14" fill="#0f141a"/><rect width="1200" height="330" rx="14" fill="url(#g2)"/>
+<text x="30.0" y="50" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="13" fill="#7d8a96" letter-spacing="2">HOW THE TOOLS CONNECT</text>
+<text x="1170.0" y="50" text-anchor="end" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="11" fill="#3b4652" letter-spacing="1">DWG JKR-200 · DATA FLOW</text>
+<path id="fb" d="M1072.0 186 C1072.0 264 128.0 264 128.0 190" class="wire back"/>
+<polygon points="123.0,198 128.0,189 133.0,198" fill="#ff8a1f"/>
+<circle r="4.5" fill="#ff8a1f"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#fb"/></animateMotion></circle>
+<circle r="4.5" fill="#ff8a1f"><animateMotion dur="4s" begin="2s" repeatCount="indefinite"><mpath href="#fb"/></animateMotion></circle>
+<rect x="410.0" y="234" width="380" height="30" fill="#0f141a"/>
+<text x="600.0" y="254" text-anchor="middle" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="12.5" fill="#ff8a1f" letter-spacing="1.5">OBMI MERIDIAN · USAGE, HEALTH &amp; QC FEED BACK</text>
+<path id="p0" d="M234.0 138.0 H264.0" class="wire"/><polygon points="257.0,133.0 264.0,138.0 257.0,143.0" fill="#5ec8ff"/><path id="p1" d="M470.0 138.0 H500.0" class="wire"/><polygon points="493.0,133.0 500.0,138.0 493.0,143.0" fill="#5ec8ff"/><path id="p2" d="M706.0 138.0 H736.0" class="wire"/><polygon points="729.0,133.0 736.0,138.0 729.0,143.0" fill="#5ec8ff"/><path id="p3" d="M942.0 138.0 H972.0" class="wire"/><polygon points="965.0,133.0 972.0,138.0 965.0,143.0" fill="#5ec8ff"/>
+<g class="node" style="animation-delay:0.0s">
+  <polygon points="30.0,92 36.0,86 232.0,86 226.0,92" fill="#c9ccc4" opacity=".55"/>
+  <polygon points="226.0,92 232.0,86 232.0,178 226.0,184" fill="#c9ccc4" opacity=".35"/>
+  <rect x="30.0" y="92" width="196" height="92" fill="#151b22" stroke="#c9ccc4" stroke-width="1.5"/>
+  <rect x="30.0" y="92" width="196" height="4" fill="#c9ccc4"/>
+  <text x="44.0" y="122" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="11" fill="#7d8a96" letter-spacing="1.5">STEP 01</text>
+  <text x="44.0" y="148" font-family="'Arial Narrow','Roboto Condensed','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="20" fill="#e8eae4" textLength="168" lengthAdjust="spacingAndGlyphs">REVIT · NAVISWORKS</text>
+  <text x="44.0" y="170" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-size="13" fill="#aeb4ad">Models &amp; clash tests</text>
+</g><g class="node" style="animation-delay:0.5s">
+  <polygon points="266.0,92 272.0,86 468.0,86 462.0,92" fill="#ff8a1f" opacity=".55"/>
+  <polygon points="462.0,92 468.0,86 468.0,178 462.0,184" fill="#ff8a1f" opacity=".35"/>
+  <rect x="266.0" y="92" width="196" height="92" fill="#151b22" stroke="#ff8a1f" stroke-width="1.5"/>
+  <rect x="266.0" y="92" width="196" height="4" fill="#ff8a1f"/>
+  <text x="280.0" y="122" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="11" fill="#7d8a96" letter-spacing="1.5">STEP 02</text>
+  <text x="280.0" y="148" font-family="'Arial Narrow','Roboto Condensed','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="20" fill="#e8eae4" textLength="74" lengthAdjust="spacingAndGlyphs">ADD-INS</text>
+  <text x="280.0" y="170" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-size="13" fill="#aeb4ad">C# · pyRevit · WPF</text>
+</g><g class="node" style="animation-delay:1.0s">
+  <polygon points="502.0,92 508.0,86 704.0,86 698.0,92" fill="#5ec8ff" opacity=".55"/>
+  <polygon points="698.0,92 704.0,86 704.0,178 698.0,184" fill="#5ec8ff" opacity=".35"/>
+  <rect x="502.0" y="92" width="196" height="92" fill="#151b22" stroke="#5ec8ff" stroke-width="1.5"/>
+  <rect x="502.0" y="92" width="196" height="4" fill="#5ec8ff"/>
+  <text x="516.0" y="122" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="11" fill="#7d8a96" letter-spacing="1.5">STEP 03</text>
+  <text x="516.0" y="148" font-family="'Arial Narrow','Roboto Condensed','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="20" fill="#e8eae4" textLength="158" lengthAdjust="spacingAndGlyphs">APS · ACC CLOUD</text>
+  <text x="516.0" y="170" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-size="13" fill="#aeb4ad">GraphQL · REST · Node.js</text>
+</g><g class="node" style="animation-delay:1.5s">
+  <polygon points="738.0,92 744.0,86 940.0,86 934.0,92" fill="#c58bff" opacity=".55"/>
+  <polygon points="934.0,92 940.0,86 940.0,178 934.0,184" fill="#c58bff" opacity=".35"/>
+  <rect x="738.0" y="92" width="196" height="92" fill="#151b22" stroke="#c58bff" stroke-width="1.5"/>
+  <rect x="738.0" y="92" width="196" height="4" fill="#c58bff"/>
+  <text x="752.0" y="122" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="11" fill="#7d8a96" letter-spacing="1.5">STEP 04</text>
+  <text x="752.0" y="148" font-family="'Arial Narrow','Roboto Condensed','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="20" fill="#e8eae4" textLength="147" lengthAdjust="spacingAndGlyphs">POWER PLATFORM</text>
+  <text x="752.0" y="170" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-size="13" fill="#aeb4ad">Automate · Apps · BI</text>
+</g><g class="node" style="animation-delay:2.0s">
+  <polygon points="974.0,92 980.0,86 1176.0,86 1170.0,92" fill="#7fd6a0" opacity=".55"/>
+  <polygon points="1170.0,92 1176.0,86 1176.0,178 1170.0,184" fill="#7fd6a0" opacity=".35"/>
+  <rect x="974.0" y="92" width="196" height="92" fill="#151b22" stroke="#7fd6a0" stroke-width="1.5"/>
+  <rect x="974.0" y="92" width="196" height="4" fill="#7fd6a0"/>
+  <text x="988.0" y="122" font-family="ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" font-size="11" fill="#7d8a96" letter-spacing="1.5">STEP 05</text>
+  <text x="988.0" y="148" font-family="'Arial Narrow','Roboto Condensed','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="20" fill="#e8eae4" textLength="94" lengthAdjust="spacingAndGlyphs">DECISIONS</text>
+  <text x="988.0" y="170" font-family="system-ui,-apple-system,'Segoe UI',Arial,sans-serif" font-size="13" fill="#aeb4ad">Dashboards &amp; reports</text>
+</g>
+<circle r="4" fill="#ffffff"><animateMotion dur="1.6s" begin="0.0s" repeatCount="indefinite"><mpath href="#p0"/></animateMotion></circle><circle r="4" fill="#ffffff"><animateMotion dur="1.6s" begin="0.4s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle><circle r="4" fill="#ffffff"><animateMotion dur="1.6s" begin="0.8s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></circle><circle r="4" fill="#ffffff"><animateMotion dur="1.6s" begin="1.2000000000000002s" repeatCount="indefinite"><mpath href="#p3"/></animateMotion></circle>
+</svg>
