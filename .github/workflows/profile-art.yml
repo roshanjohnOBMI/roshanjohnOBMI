@@ -24,12 +24,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
 
-      - name: Commit 3D chart
+      # Site progress board from public GitHub data
+      - name: Draw tech-stack helix and site progress board
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 scripts/stack_helix.py > assets/stack-helix.svg
+          python3 scripts/site_stats.py "${{ github.repository_owner }}" > "$RUNNER_TEMP/site-stats.svg"
+          mv "$RUNNER_TEMP/site-stats.svg" assets/site-stats.svg
+
+      - name: Commit 3D chart and board
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib
-          git diff --cached --quiet || git commit -m "Update 3D contribution chart"
+          git add profile-3d-contrib assets/site-stats.svg assets/stack-helix.svg
+          git diff --cached --quiet || git commit -m "Update 3D chart and site progress board"
           git push
 
       # Contribution snake -> output branch
