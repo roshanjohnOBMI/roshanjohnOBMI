@@ -95,38 +95,7 @@ flowchart LR
 
 ## Tools
 
-```mermaid
-mindmap
-  root((Tech))
-
-    ((Code))
-      C# / .NET
-      Python
-      JavaScript / Node.js
-      TypeScript
-
-    ((AEC))
-      Revit API
-      Navisworks API
-      pyRevit
-      Dynamo
-
-    ((Cloud))
-      Autodesk Platform Services
-      ACC
-      GraphQL / REST
-      Azure
-
-    ((Power Platform))
-      Power BI
-      Power Automate
-      Power Apps
-
-    ((Data))
-      ClosedXML
-      Power Query
-      SharePoint
-```
+<img src="assets/stack-helix.svg" width="100%" alt="Tech stack as a rotating double helix: Revit API, Navisworks API, pyRevit, Dynamo, C#/.NET, Python, JavaScript/Node.js, TypeScript, Autodesk Platform Services, ACC, GraphQL/REST, Azure, Power BI, Power Automate, Power Apps, Power Query, ClosedXML, SharePoint." />
 
 ## Work
 
@@ -149,22 +118,13 @@ mindmap
 
 ---
 
-## Stats
+## Site progress
 
-<p align="left">
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanjohnOBMI&theme=github_dark" alt="GitHub stats" />
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=roshanjohnOBMI&theme=github_dark" alt="Top languages" />
-</p>
-
-<img src="https://streak-stats.demolab.com?user=roshanjohnOBMI&theme=github-dark&ring=FF8A1F&fire=FF8A1F&currStreakLabel=5EC8FF" alt="Contribution streak" />
-
-<img src="https://github-trophies.vercel.app/?username=roshanjohnOBMI&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" alt="Trophies" />
+<img src="assets/site-stats.svg" width="100%" alt="Site progress board: public contributions per month as an isometric skyline, with contribution, commit, repository and streak counters and a language breakdown. Updated nightly." />
 
 ## 3D contributions
 
 <img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar" />
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanjohnOBMI&theme=github_dark" width="100%" alt="Contribution activity" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/roshanjohnOBMI/roshanjohnOBMI/output/github-snake-dark.svg" />
