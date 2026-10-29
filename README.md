@@ -1,10 +1,12 @@
-# J K Roshan Kerketta
+<a href="https://roshanjohnobmi.github.io/"><img src="assets/banner.svg" width="100%" alt="J K Roshan Kerketta — BIM Manager, Architect, Automation Developer. Play my 3D build site." /></a>
 
-<a href="https://github.com/roshanjohnOBMI"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&pause=1000&color=00CC66&vCenter=true&width=600&lines=BIM+Manager+%40+OBMI;Architect+turned+developer;Revit+%26+Navisworks+add-ins;APS+%2B+Power+Platform+automation;Dreaming%2C+Developing%2C+Deploying." alt="Typing SVG" /></a>
+<p align="center">
+  <a href="https://roshanjohnobmi.github.io/"><b>▶ Play the 3D build site</b></a> ·
+  <a href="https://www.linkedin.com/in/j-k-roshan-kerketta-a2a4a669">LinkedIn</a> ·
+  <a href="https://kuldeep3618x.github.io/roshan-cv/">CV</a>
+</p>
 
-BIM Manager — Architect — Automation & Solutions Developer
-
-Architect-turned-developer building automation tools, cloud platforms, and data pipelines that make BIM delivery faster and more reliable across the AEC industry. Ten years on airports, stadiums, high-rise towers, and giga-projects — now at OBMI in Dubai.
+Architect-turned-developer building automation tools, cloud platforms and data pipelines that make BIM delivery faster and more reliable. Ten years on airports, stadiums, high-rise towers and giga-projects, now at OBMI in Dubai.
 
 *Dreaming, Developing, Deploying.*
 
@@ -14,25 +16,82 @@ Architect-turned-developer building automation tools, cloud platforms, and data 
 
 > **BIM Automation · Revit & Navisworks Add-ins · Autodesk Platform Services · Power Platform · AI Workflows**
 
-## Currently Building
+## How the tools connect
 
-- 🧭 **OBMI Meridian** — one platform to deploy, license and track every BIM add-in across the office
-- 🏃 **OBMI Move30** — rolling out to teams for the 30x30 Wellness Challenge
-- 🤖 **AI automations** — turning repetitive BIM coordination work into one-click tools
+<img src="assets/pipeline.svg" width="100%" alt="Revit and Navisworks models feed C# and pyRevit add-ins, which push data through APS and ACC into the Power Platform and out to dashboards. OBMI Meridian feeds usage and model health back." />
 
-## Projects I've Delivered On
+<details>
+<summary><b>Open the workflows</b> (click a tool to expand)</summary>
 
-> NEOM Trojena · Al Maktoum International Airport · Bin Rashid Stadium · Ras El Hekmah · Wadi Yemm
+<br>
 
-## Connect
+<details>
+<summary>🧭 <b>OBMI Meridian</b> — deploy, license and track every add-in</summary>
 
-<p align="left">
-  <a href="https://www.linkedin.com/in/j-k-roshan-kerketta-a2a4a669"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/linkedin.png" alt="LinkedIn" /></a>
-  &nbsp;
-  <a href="https://kuldeep3618x.github.io/roshan-cv/"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/domain.png" alt="CV" /></a>
-  &nbsp;
-  <a href="https://github.com/roshanjohnOBMI"><img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png" alt="GitHub" /></a>
-</p>
+```mermaid
+flowchart LR
+  A[Sign in with Autodesk ID] --> B[Add-in catalogue]
+  B --> C[Deploy to Revit]
+  B --> D[Deploy to Navisworks]
+  C --> E[(Usage telemetry)]
+  D --> E
+  E --> F[Admin dashboard]
+```
+</details>
+
+<details>
+<summary>🩺 <b>ACC Model Health Check</b></summary>
+
+```mermaid
+flowchart LR
+  A[ACC hub] --> B[Pull models via APS] --> C[Run checks] --> D[Health score] --> E[Report]
+```
+</details>
+
+<details>
+<summary>📋 <b>TIDP / MIDP Checker</b></summary>
+
+```mermaid
+flowchart LR
+  A[Delivery plan] --> C{Match & compare}
+  B[ACC deliverables] --> C
+  C --> D[Gaps flagged] --> E[Status report]
+```
+</details>
+
+<details>
+<summary>🧱 <b>Workset Manager</b> (pyRevit)</summary>
+
+```mermaid
+flowchart LR
+  A[Excel rules] --> B[Match by category & family] --> C[Preview in WPF] --> D[Bulk assign] --> E[Clean model]
+```
+</details>
+
+<details>
+<summary>💬 <b>ClashCommentSync</b> · ⚙️ <b>Clash Tolerance Updater</b> (Navisworks)</summary>
+
+```mermaid
+flowchart LR
+  subgraph Comments
+    A[Clash results] --> B[Export to Excel] --> C[Team comments] --> D[Import back]
+  end
+  subgraph Tolerance
+    E[Select tests] --> F[Copy] --> G[Edit tolerance] --> H[Commit]
+  end
+```
+</details>
+
+<details>
+<summary>📊 <b>ACC → Power BI Live Data</b></summary>
+
+```mermaid
+flowchart LR
+  A[Revit model on ACC] --> B[Data Exchange GraphQL] --> C[Power Query Online] --> D[Dataflow refresh] --> E[Live dashboard]
+```
+</details>
+
+</details>
 
 ## Tools
 
@@ -73,33 +132,42 @@ mindmap
 
 | Name | Description | Link | Status | Tech Stack |
 | --- | --- | --- | --- | --- |
-| OBMI Meridian | Command centre for OBMI's BIM data — add-in deployment, shared credentials, and global usage tracking | Internal | Work in Progress | Node.js · Express · APS · Azure |
-| ACC Model Health Check | Automated health reporting for Revit models hosted on Autodesk Construction Cloud | Internal | Completed | Node.js · APS |
-| TIDP / MIDP Checker | Validates information delivery plans against ACC deliverables | Internal | Completed | Node.js · APS |
-| Workset Manager | pyRevit extension for bulk element-to-workset assignment with Excel rule import | Internal | Completed | Python · pyRevit · WPF |
-| ClashCommentSync | Navisworks add-in to export and import clash comments via Excel | Internal | Completed | C# · Navisworks API · ClosedXML |
+| OBMI Meridian | Command centre for OBMI's BIM data — add-in deployment, shared credentials and usage tracking | Internal | Work in Progress | Node.js · Express · APS · Azure |
+| ACC Model Health Check | Automated health reporting for Revit models on Autodesk Construction Cloud | Internal | Completed | Node.js · APS |
+| TIDP / MIDP Checker | Checks information delivery plans against ACC deliverables | Internal | Completed | Node.js · APS |
+| Workset Manager | pyRevit extension for bulk element-to-workset assignment with Excel rules | Internal | Completed | Python · pyRevit · WPF |
+| ClashCommentSync | Navisworks add-in to round-trip clash comments through Excel | Internal | Completed | C# · Navisworks API · ClosedXML |
 | Clash Tolerance Updater | Bulk clash-test tolerance updates through the Navisworks Clash API | Internal | Completed | C# · Navisworks API |
 | ACC → Power BI Live Data | Live Revit data in Power BI Online via the APS Data Exchange GraphQL API | Internal | Completed | Power Query M · GraphQL · APS |
 | OBMI Move30 | Web app for OBMI's 30x30 Wellness Challenge with Microsoft 365 sign-in and wearable sync | Internal | Work in Progress | React · PWA · Microsoft 365 |
 | obmiAppCosting | Costing app for OBMI applications | [GitHub](https://github.com/roshanjohnOBMI/obmiAppCosting) | Completed | TypeScript |
+| Roshan's Build Site | This profile as a playable 3D construction site | [Play](https://roshanjohnobmi.github.io/) | Live | Three.js · WebGL |
+
+## Projects I've delivered on
+
+> NEOM Trojena · Al Maktoum International Airport · Bin Rashid Stadium · Ras El Hekmah · Wadi Yemm
 
 ---
 
 ## Stats
 
 <p align="left">
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanjohnOBMI&theme=github_dark" alt="GitHub Stats" />
-  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=roshanjohnOBMI&theme=github_dark" alt="Top Languages" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanjohnOBMI&theme=github_dark" alt="GitHub stats" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=roshanjohnOBMI&theme=github_dark" alt="Top languages" />
 </p>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=roshanjohnOBMI&theme=github-dark)
+<img src="https://streak-stats.demolab.com?user=roshanjohnOBMI&theme=github-dark&ring=FF8A1F&fire=FF8A1F&currStreakLabel=5EC8FF" alt="Contribution streak" />
 
-## Trophies
+<img src="https://github-trophies.vercel.app/?username=roshanjohnOBMI&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7" alt="Trophies" />
 
-![Trophies](https://github-trophies.vercel.app/?username=roshanjohnOBMI&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7)
+## 3D contributions
 
----
+<img src="profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D contribution calendar" />
 
-## Activity
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanjohnOBMI&theme=github_dark" width="100%" alt="Contribution activity" />
 
-![Contributions](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanjohnOBMI&theme=github_dark)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/roshanjohnOBMI/roshanjohnOBMI/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/roshanjohnOBMI/roshanjohnOBMI/output/github-snake.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/roshanjohnOBMI/roshanjohnOBMI/output/github-snake-dark.svg" width="100%" />
+</picture>
