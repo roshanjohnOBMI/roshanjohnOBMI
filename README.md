@@ -88,18 +88,18 @@ mindmap
 ## Stats
 
 <p align="left">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=roshanjohnOBMI&show_icons=true&theme=github_dark&hide_border=true&bg_color=00000000&icon_color=00cc66&title_color=00cc66" alt="GitHub Stats" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=roshanjohnOBMI&layout=compact&theme=github_dark&hide_border=true&bg_color=00000000&title_color=00cc66" alt="Top Languages" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=roshanjohnOBMI&theme=github_dark" alt="GitHub Stats" />
+  <img height="170" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=roshanjohnOBMI&theme=github_dark" alt="Top Languages" />
 </p>
 
 ![GitHub Streak](https://streak-stats.demolab.com?user=roshanjohnOBMI&theme=github-dark)
 
 ## Trophies
 
-![Trophies](https://github-profile-trophy.vercel.app/?username=roshanjohnOBMI&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7)
+![Trophies](https://github-trophies.vercel.app/?username=roshanjohnOBMI&theme=darkhub&no-frame=true&no-bg=true&margin-w=4&column=7)
 
 ---
 
 ## Activity
 
-![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=roshanjohnOBMI&theme=github-dark&bg_color=00000000&color=00aa55&line=00cc66&point=00ff88&area=false)
+![Contributions](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=roshanjohnOBMI&theme=github_dark)
