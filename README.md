@@ -81,7 +81,7 @@ mindmap
 | Clash Tolerance Updater | Bulk clash-test tolerance updates through the Navisworks Clash API | Internal | Completed | C# · Navisworks API |
 | ACC → Power BI Live Data | Live Revit data in Power BI Online via the APS Data Exchange GraphQL API | Internal | Completed | Power Query M · GraphQL · APS |
 | OBMI Move30 | Web app for OBMI's 30x30 Wellness Challenge with Microsoft 365 sign-in and wearable sync | Internal | Work in Progress | React · PWA · Microsoft 365 |
-| obmiAppCosting | Costing app for OBMI applications | <https://github.com/roshanjohnOBMI/obmiAppCosting> | Completed | TypeScript |
+| obmiAppCosting | Costing app for OBMI applications | [GitHub](https://github.com/roshanjohnOBMI/obmiAppCosting) | Completed | TypeScript |
 
 ---
 
