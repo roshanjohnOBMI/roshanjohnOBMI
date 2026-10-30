@@ -30,7 +30,7 @@ Architect-turned-developer building automation tools, cloud platforms and data p
 | OBMI Meridian | Command centre for OBMI's BIM data — add-in deployment, shared credentials and usage tracking | Internal | Work in Progress | Node.js · Express · APS · Azure |
 | ACC Model Health Check | Automated health reporting for Revit models on Autodesk Construction Cloud | Internal | Completed | Node.js · APS |
 | TIDP / MIDP Checker | Checks information delivery plans against ACC deliverables | Internal | Completed | Node.js · APS |
-| Workset Manager | pyRevit extension for bulk element-to-workset assignment with Excel rules | Internal | Completed | Python · pyRevit · WPF |
+| Workset Manager | C# Revit add-in for bulk element-to-workset assignment with Excel rules | Internal | Completed | C# · Revit API · WPF |
 | ClashCommentSync | Navisworks add-in to round-trip clash comments through Excel | Internal | Completed | C# · Navisworks API · ClosedXML |
 | Clash Tolerance Updater | Bulk clash-test tolerance updates through the Navisworks Clash API | Internal | Completed | C# · Navisworks API |
 | ACC → Power BI Live Data | Live Revit data in Power BI Online via the APS Data Exchange GraphQL API | Internal | Completed | Power Query M · GraphQL · APS |
