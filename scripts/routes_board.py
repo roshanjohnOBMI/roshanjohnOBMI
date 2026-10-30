@@ -152,7 +152,8 @@ for name, col in C.items():
                f'<text x="{lx + 18}" y="{ly}" font-family="{MONO}" font-size="11.5" fill="#aeb4ad" letter-spacing="1">{name.upper()}</text>')
     lx += 30 + len(name) * 8.6 + 26
 stand = " · ".join(f"{k} ({v[0].lower() + v[1:]})" for k, v in M.STANDALONE.items())
-leg.append(f'<text x="{W - PADX}" y="{ly}" text-anchor="end" font-family="{FONT}" font-size="12" fill="#7d8a96">Also in the toolkit: {stand}</text>')
+if stand:
+    leg.append(f'<text x="{W - PADX}" y="{ly}" text-anchor="end" font-family="{FONT}" font-size="12" fill="#7d8a96">Also in the toolkit: {stand}</text>')
 
 tools_n = len(M.TOOLS)
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Integration routes: {N} apps, each routed through its tools from authoring to output. {'; '.join(a['name'] + ': ' + ', '.join(M.route(a)) for a in M.APPS)}.">
