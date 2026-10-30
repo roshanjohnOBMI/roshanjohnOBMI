@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "17 19 * * *"   # daily, 23:17 Dubai time
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["scripts/**", "README.md"]
 
 permissions:
   contents: write
@@ -18,44 +21,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 3D contribution calendar -> profile-3d-contrib/*.svg on main
-      - uses: yoshi389111/github-profile-3d-contrib@v0.9.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
+      # Fails the run if any app or tool is disconnected, or the Work table drifts from the map
+      - name: Validate stack map
+        run: python3 scripts/stack_map.py
 
-      # Site progress board from public GitHub data
-      - name: Draw tech-stack helix and site progress board
+      - name: Draw banner, routes board, stack map and site progress
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 scripts/stack_helix.py > assets/stack-helix.svg
+          python3 scripts/banner.py > assets/banner.svg
+          python3 scripts/routes_board.py > assets/routes.svg
+          python3 scripts/stack_map.py --json > assets/stack-map.json
           python3 scripts/site_stats.py "${{ github.repository_owner }}" > "$RUNNER_TEMP/site-stats.svg"
           mv "$RUNNER_TEMP/site-stats.svg" assets/site-stats.svg
 
-      - name: Commit 3D chart and board
+      - name: Commit artwork
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile-3d-contrib assets/site-stats.svg assets/stack-helix.svg
-          git diff --cached --quiet || git commit -m "Update 3D chart and site progress board"
+          git add assets
+          git diff --cached --quiet || git commit -m "Update profile artwork"
           git push
-
-      # Contribution snake -> output branch
-      - uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=#ff8a1f
-
-      - name: Publish snake to output branch
-        run: |
-          mkdir -p "$RUNNER_TEMP/snake" && cp dist/*.svg "$RUNNER_TEMP/snake/"
-          cd "$RUNNER_TEMP/snake"
-          git init -q -b output
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -q -m "Update contribution snake"
-          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" output
