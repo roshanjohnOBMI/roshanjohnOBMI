@@ -20,10 +20,7 @@ CATEGORY_COLOURS = {
 TOOLS = {
     "Revit API":                  ("Revit API", "AEC", "Authoring"),
     "Navisworks API":             ("Navisworks", "AEC", "Authoring"),
-    "Dynamo":                     ("Dynamo", "AEC", "Authoring"),
     "C# / .NET":                  ("C# / .NET", "Code", "Code"),
-    "Python":                     ("Python", "Code", "Code"),
-    "pyRevit":                    ("pyRevit", "Code", "Code"),
     "JavaScript / Node.js":       ("Node.js", "Code", "Code"),
     "TypeScript":                 ("TypeScript", "Code", "Code"),
     "Autodesk Platform Services": ("APS", "Cloud", "Cloud"),
@@ -40,7 +37,7 @@ TOOLS = {
 OUTPUTS = ["Dashboards", "Reports", "Model updates", "Web apps"]
 
 # Tools in the stack that aren't part of a published app route (shown, not hidden).
-STANDALONE = {"Dynamo": "Day-to-day Revit automation graphs"}
+STANDALONE = {}
 
 # name must match the README Work table exactly
 APPS = [
@@ -54,7 +51,7 @@ APPS = [
      "tools": ["JavaScript / Node.js", "Autodesk Platform Services", "ACC"],
      "what": "Checks delivery plans against ACC deliverables"},
     {"name": "Workset Manager", "status": "live", "output": "Model updates",
-     "tools": ["Revit API", "Python", "pyRevit"],
+     "tools": ["Revit API", "C# / .NET"],
      "what": "Bulk workset assignment from Excel rules"},
     {"name": "ClashCommentSync", "status": "live", "output": "Reports",
      "tools": ["Navisworks API", "C# / .NET", "ClosedXML"],
