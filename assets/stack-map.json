@@ -1,0 +1,341 @@
+{
+ "stages": [
+  "Authoring",
+  "Code",
+  "Cloud",
+  "Data",
+  "Platform",
+  "Output"
+ ],
+ "colours": {
+  "AEC": "#ff8a1f",
+  "Code": "#f2c94c",
+  "Cloud": "#5ec8ff",
+  "Data": "#7fd6a0",
+  "Power Platform": "#c58bff",
+  "Output": "#e8eae4"
+ },
+ "tools": [
+  {
+   "name": "Revit API",
+   "short": "Revit API",
+   "category": "AEC",
+   "stage": "Authoring",
+   "standalone": null
+  },
+  {
+   "name": "Navisworks API",
+   "short": "Navisworks",
+   "category": "AEC",
+   "stage": "Authoring",
+   "standalone": null
+  },
+  {
+   "name": "Dynamo",
+   "short": "Dynamo",
+   "category": "AEC",
+   "stage": "Authoring",
+   "standalone": "Day-to-day Revit automation graphs"
+  },
+  {
+   "name": "C# / .NET",
+   "short": "C# / .NET",
+   "category": "Code",
+   "stage": "Code",
+   "standalone": null
+  },
+  {
+   "name": "Python",
+   "short": "Python",
+   "category": "Code",
+   "stage": "Code",
+   "standalone": null
+  },
+  {
+   "name": "pyRevit",
+   "short": "pyRevit",
+   "category": "Code",
+   "stage": "Code",
+   "standalone": null
+  },
+  {
+   "name": "JavaScript / Node.js",
+   "short": "Node.js",
+   "category": "Code",
+   "stage": "Code",
+   "standalone": null
+  },
+  {
+   "name": "TypeScript",
+   "short": "TypeScript",
+   "category": "Code",
+   "stage": "Code",
+   "standalone": null
+  },
+  {
+   "name": "Autodesk Platform Services",
+   "short": "APS",
+   "category": "Cloud",
+   "stage": "Cloud",
+   "standalone": null
+  },
+  {
+   "name": "ACC",
+   "short": "ACC",
+   "category": "Cloud",
+   "stage": "Cloud",
+   "standalone": null
+  },
+  {
+   "name": "Azure",
+   "short": "Azure",
+   "category": "Cloud",
+   "stage": "Cloud",
+   "standalone": null
+  },
+  {
+   "name": "GraphQL / REST",
+   "short": "GraphQL",
+   "category": "Data",
+   "stage": "Data",
+   "standalone": null
+  },
+  {
+   "name": "ClosedXML",
+   "short": "ClosedXML",
+   "category": "Data",
+   "stage": "Data",
+   "standalone": null
+  },
+  {
+   "name": "Power Query",
+   "short": "Power Query",
+   "category": "Data",
+   "stage": "Data",
+   "standalone": null
+  },
+  {
+   "name": "SharePoint",
+   "short": "SharePoint",
+   "category": "Data",
+   "stage": "Data",
+   "standalone": null
+  },
+  {
+   "name": "Power Automate",
+   "short": "Automate",
+   "category": "Power Platform",
+   "stage": "Platform",
+   "standalone": null
+  },
+  {
+   "name": "Power Apps",
+   "short": "Power Apps",
+   "category": "Power Platform",
+   "stage": "Platform",
+   "standalone": null
+  },
+  {
+   "name": "Power BI",
+   "short": "Power BI",
+   "category": "Power Platform",
+   "stage": "Platform",
+   "standalone": null
+  }
+ ],
+ "outputs": [
+  "Dashboards",
+  "Reports",
+  "Model updates",
+  "Web apps"
+ ],
+ "apps": [
+  {
+   "name": "OBMI Meridian",
+   "status": "wip",
+   "output": "Dashboards",
+   "tools": [
+    "Revit API",
+    "Navisworks API",
+    "C# / .NET",
+    "JavaScript / Node.js",
+    "Autodesk Platform Services",
+    "Azure"
+   ],
+   "what": "Deploys and tracks BIM add-ins office-wide",
+   "route": [
+    "Revit API",
+    "Navisworks API",
+    "C# / .NET",
+    "JavaScript / Node.js",
+    "Autodesk Platform Services",
+    "Azure",
+    "Dashboards"
+   ]
+  },
+  {
+   "name": "ACC Model Health Check",
+   "status": "live",
+   "output": "Dashboards",
+   "tools": [
+    "JavaScript / Node.js",
+    "Autodesk Platform Services",
+    "ACC"
+   ],
+   "what": "Health reports for Revit models on ACC",
+   "route": [
+    "JavaScript / Node.js",
+    "Autodesk Platform Services",
+    "ACC",
+    "Dashboards"
+   ]
+  },
+  {
+   "name": "TIDP / MIDP Checker",
+   "status": "live",
+   "output": "Reports",
+   "tools": [
+    "JavaScript / Node.js",
+    "Autodesk Platform Services",
+    "ACC"
+   ],
+   "what": "Checks delivery plans against ACC deliverables",
+   "route": [
+    "JavaScript / Node.js",
+    "Autodesk Platform Services",
+    "ACC",
+    "Reports"
+   ]
+  },
+  {
+   "name": "Workset Manager",
+   "status": "live",
+   "output": "Model updates",
+   "tools": [
+    "Revit API",
+    "Python",
+    "pyRevit"
+   ],
+   "what": "Bulk workset assignment from Excel rules",
+   "route": [
+    "Revit API",
+    "Python",
+    "pyRevit",
+    "Model updates"
+   ]
+  },
+  {
+   "name": "ClashCommentSync",
+   "status": "live",
+   "output": "Reports",
+   "tools": [
+    "Navisworks API",
+    "C# / .NET",
+    "ClosedXML"
+   ],
+   "what": "Round-trips clash comments through Excel",
+   "route": [
+    "Navisworks API",
+    "C# / .NET",
+    "ClosedXML",
+    "Reports"
+   ]
+  },
+  {
+   "name": "Clash Tolerance Updater",
+   "status": "live",
+   "output": "Model updates",
+   "tools": [
+    "Navisworks API",
+    "C# / .NET"
+   ],
+   "what": "Bulk tolerance edits through the Clash API",
+   "route": [
+    "Navisworks API",
+    "C# / .NET",
+    "Model updates"
+   ]
+  },
+  {
+   "name": "ACC → Power BI Live Data",
+   "status": "live",
+   "output": "Dashboards",
+   "tools": [
+    "ACC",
+    "Autodesk Platform Services",
+    "GraphQL / REST",
+    "Power Query",
+    "Power BI"
+   ],
+   "what": "Live Revit data in Power BI Online",
+   "route": [
+    "ACC",
+    "Autodesk Platform Services",
+    "GraphQL / REST",
+    "Power Query",
+    "Power BI",
+    "Dashboards"
+   ]
+  },
+  {
+   "name": "ACC File Activity Tracker",
+   "status": "live",
+   "output": "Dashboards",
+   "tools": [
+    "ACC",
+    "SharePoint",
+    "Power Automate",
+    "Power Apps"
+   ],
+   "what": "Logs ACC file activity to SharePoint",
+   "route": [
+    "ACC",
+    "SharePoint",
+    "Power Automate",
+    "Power Apps",
+    "Dashboards"
+   ]
+  },
+  {
+   "name": "OBMI Move30",
+   "status": "wip",
+   "output": "Web apps",
+   "tools": [
+    "JavaScript / Node.js",
+    "Azure"
+   ],
+   "what": "30x30 Wellness Challenge web app",
+   "route": [
+    "JavaScript / Node.js",
+    "Azure",
+    "Web apps"
+   ]
+  },
+  {
+   "name": "obmiAppCosting",
+   "status": "live",
+   "output": "Web apps",
+   "tools": [
+    "TypeScript"
+   ],
+   "what": "Costing app for OBMI applications",
+   "route": [
+    "TypeScript",
+    "Web apps"
+   ]
+  },
+  {
+   "name": "Roshan's Build Site",
+   "status": "live",
+   "output": "Web apps",
+   "tools": [
+    "JavaScript / Node.js"
+   ],
+   "what": "This profile as a playable 3D site",
+   "route": [
+    "JavaScript / Node.js",
+    "Web apps"
+   ]
+  }
+ ]
+}
