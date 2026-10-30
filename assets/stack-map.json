@@ -31,29 +31,8 @@
    "standalone": null
   },
   {
-   "name": "Dynamo",
-   "short": "Dynamo",
-   "category": "AEC",
-   "stage": "Authoring",
-   "standalone": "Day-to-day Revit automation graphs"
-  },
-  {
    "name": "C# / .NET",
    "short": "C# / .NET",
-   "category": "Code",
-   "stage": "Code",
-   "standalone": null
-  },
-  {
-   "name": "Python",
-   "short": "Python",
-   "category": "Code",
-   "stage": "Code",
-   "standalone": null
-  },
-  {
-   "name": "pyRevit",
-   "short": "pyRevit",
    "category": "Code",
    "stage": "Code",
    "standalone": null
@@ -213,14 +192,12 @@
    "output": "Model updates",
    "tools": [
     "Revit API",
-    "Python",
-    "pyRevit"
+    "C# / .NET"
    ],
    "what": "Bulk workset assignment from Excel rules",
    "route": [
     "Revit API",
-    "Python",
-    "pyRevit",
+    "C# / .NET",
     "Model updates"
    ]
   },
